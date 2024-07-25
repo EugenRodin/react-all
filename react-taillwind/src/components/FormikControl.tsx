@@ -1,8 +1,9 @@
-import Input from './FormComponents/Input.tsx'
+import Input from "./FormComponents/Input.tsx";
 import Textarea from "./FormComponents/Textarea.tsx";
 import Select, {SelectOption, SelectProps} from "./FormComponents/Select.tsx";
 import Radiobutton, {RadiobuttonOption, RadiobuttonProps} from "./FormComponents/Radiobutton.tsx";
 import Checkbox, {CheckboxOption, CheckboxProps} from "./FormComponents/Ckeckbox.tsx";
+import Datepicker from "./FormComponents/Datepicker.tsx";
 
 interface FormikControlProps {
   control: string
@@ -27,6 +28,7 @@ const FormikControl = ({control, ...rest}: FormikControlProps) => {
         case 'checkbox':
             return <Checkbox {...(rest as CheckboxProps )} />
         case 'date':
+            return <Datepicker {...rest} />
         default:
             return null
     }

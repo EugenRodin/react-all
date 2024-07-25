@@ -9,7 +9,8 @@ interface Values {
     description: ''
     selectOption: '',
     radioOption: ''
-    checkboxOption: []
+    checkboxOption: [],
+    date: null
 }
 
 export const radioOption: RadiobuttonOption[] = [
@@ -48,17 +49,20 @@ const initialValues: Values = {
     description: '',
     selectOption: '',
     radioOption: '',
-    checkboxOption: []
+    checkboxOption: [],
+    date: null
 }
 const  validationSchema = Yup.object({
   email: Yup.string().required('Required'),
     description: Yup.string().required('Required'),
     selectOption: Yup.string().required('Required'),
     radioOption: Yup.string().required('Required'),
-    checkboxOption: Yup.array().min(1, 'Required')
+    checkboxOption: Yup.array().min(1, 'Required'),
+    date: Yup.mixed().required('Required')
 })
 const handleSubmit = (values: Values) => {
     console.log('Form data', values)
+    console.log('Saved data', JSON.parse(JSON.stringify(values)))
 }
 const FormikContainer = () => {
   return (
@@ -70,6 +74,7 @@ const FormikContainer = () => {
                 <FormikControl control='select' label='Select a topic' name='selectOption' options={selectOptions} />
                 <FormikControl control='radio' label='Radio group' name='radioOption' options={radioOption} />
                 <FormikControl control='checkbox' label='Checkbox group' name='checkboxOption' options={checkboxOptions} />
+                <FormikControl control='date' label='Pick a date' name='date' placeholder="Pick a date" />
                 <button type='submit'>Submit</button>
             </Form>
         )}
