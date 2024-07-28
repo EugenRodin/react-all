@@ -2,5 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react-context" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react-form-formik" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react-router" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react-toolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/redux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/redux-saga" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stateful-component" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stateless-component" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tests-react" vcs="Git" />
   </component>
 </project>
